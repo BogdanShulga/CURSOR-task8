@@ -10,7 +10,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Checker {
-    public static void checkPalindrome() throws NotPalindromeException {
+    public static void checkPalindrome()
+                    throws NotPalindromeException {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the string you want to check: ");
         String clean = scanner.nextLine().replaceAll("\\s+", "");
@@ -21,7 +22,8 @@ public class Checker {
         }
     }
 
-    public static void checkInt() throws GreaterThanThresholdException, IntNotEvenException {
+    public static void checkInt()
+                    throws GreaterThanThresholdException, IntNotEvenException {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the integer you want to check for evenness: ");
         int i = 1;
@@ -39,7 +41,8 @@ public class Checker {
         }
     }
 
-    public static void checkOptionalNull() throws OptionalNullException {
+    public static void checkOptionalNull()
+                    throws OptionalNullException {
         Integer i = new Random().nextInt(100) > 30 ? null : 3;
         Optional<Integer> integerOptional = Optional.ofNullable(i);
         System.out.println("Checking random integer...");
